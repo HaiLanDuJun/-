@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于运算符</title>
+    <url>/2022/02/18/%E5%85%B3%E4%BA%8E%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<p>关系运算符都是双目运算符，结合性为左结合。<br>含两个操作数为双目，单个为单目。唯一的三目运算符为条件运算符( ? : )<br>条件运算符结合方向为自右向左<br>    逻辑运算符<br>    &amp;&amp;。||。！<br>优先级：<br>非(!)&gt;算术&gt;关系&gt;&amp;&amp;和||&gt;条件运算符(?:)&gt;赋值(=)</p>
+<p>关键字break;可用于跳出switch语句，遇到break;不再执行switch中任何语句，在循环中使用结束本次循环</p>
+]]></content>
+      <tags>
+        <tag>c语言</tag>
+        <tag>运算符</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>娱乐至死</title>
     <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
     <content><![CDATA[<p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
@@ -31,17 +42,6 @@
 ]]></content>
       <tags>
         <tag>人际交往</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于运算符</title>
-    <url>/2022/02/18/%E5%85%B3%E4%BA%8E%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<p>关系运算符都是双目运算符，结合性为左结合。<br>含两个操作数为双目，单个为单目。唯一的三目运算符为条件运算符( ? : )<br>条件运算符结合方向为自右向左<br>    逻辑运算符<br>    &amp;&amp;。||。！<br>优先级：<br>非(!)&gt;算术&gt;关系&gt;&amp;&amp;和||&gt;条件运算符(?:)&gt;赋值(=)</p>
-<p>关键字break;可用于跳出switch语句，遇到break;不再执行switch中任何语句，在循环中使用结束本次循环</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-        <tag>运算符</tag>
       </tags>
   </entry>
 </search>
