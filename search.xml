@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>c易错合集</title>
+    <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。</p>
+]]></content>
+      <tags>
+        <tag>c语言</tag>
+        <tag>易错点</tag>
+        <tag>注意点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于运算符</title>
     <url>/2022/02/18/%E5%85%B3%E4%BA%8E%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<p>关系运算符都是双目运算符，结合性为左结合。<br>含两个操作数为双目，单个为单目。唯一的三目运算符为条件运算符( ? : )<br>条件运算符结合方向为自右向左<br>    逻辑运算符<br>    &amp;&amp;。||。！<br>优先级：<br>非(!)&gt;算术&gt;关系&gt;&amp;&amp;和||&gt;条件运算符(?:)&gt;赋值(=)</p>
@@ -9,15 +20,6 @@
       <tags>
         <tag>c语言</tag>
         <tag>运算符</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>娱乐至死</title>
-    <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
-    <content><![CDATA[<p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
-]]></content>
-      <tags>
-        <tag>摘录</tag>
       </tags>
   </entry>
   <entry>
@@ -33,6 +35,15 @@
       <tags>
         <tag>二进制</tag>
         <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>娱乐至死</title>
+    <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
+    <content><![CDATA[<p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
+]]></content>
+      <tags>
+        <tag>摘录</tag>
       </tags>
   </entry>
   <entry>
