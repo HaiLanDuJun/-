@@ -9,7 +9,7 @@
     
     <title>
         
-            标签: c语言 |
+            关于函数 |
         
         海兰都郡
     </title>
@@ -88,7 +88,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/tags"
                             >
                                 标签
@@ -140,7 +140,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/tags">标签</a>
                 </li>
             
@@ -165,63 +165,221 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;c语言
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">关于函数</span>
         </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container">
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/C3EF6E224963311E3114DBEDACD97D30.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">海兰</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-01 15:32:36</span>
+        <span class="mobile">2022-03-01 15:32</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/"
-                        >关于函数</a>
-                        <span class="article-date">03-01</span>
+                    <li>
+                        <a href="/tags/c%E8%AF%AD%E8%A8%80/">c语言</a>&nbsp;
                     </li>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/02/22/%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84/"
-                        >关于数组</a>
-                        <span class="article-date">02-22</span>
+                    <li>
+                        | <a href="/tags/%E5%87%BD%E6%95%B0/">函数</a>&nbsp;
                     </li>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/"
-                        >c易错合集</a>
-                        <span class="article-date">02-20</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/02/18/%E5%85%B3%E4%BA%8E%E8%BF%90%E7%AE%97%E7%AC%A6/"
-                        >关于运算符</a>
-                        <span class="article-date">02-18</span>
+                    <li>
+                        | <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>698 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
+<p>函数不能嵌套定义，main也是一个函数定义，所以自己定义的函数要放在main外。main 是函数定义，不是函数调用。当可执行文件加载到内存后，系统从 main 函数开始执行，也就是说，<br>系统会调用我们定义的 main 函数。</p>
 
         </div>
-    </div>
 
-    <div class="tag-paginator">
-        <div class="paginator">
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：关于函数</li>
+        <li>本文作者：海兰</li>
+        <li>创建时间：2022-03-01 15:32:36</li>
+        <li>
+            本文链接：https://keep.xpoet.cn/2022/03/01/关于函数/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/c%E8%AF%AD%E8%A8%80/">#c语言</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%87%BD%E6%95%B0/">#函数</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/02/22/%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">关于数组</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
     
 
+        
+            
+    <div class="valine-container">
+        <script data-pjax
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: 'y0gYGxzNQ3mLpQymjs9c9WiE-gzGzoHsz',
+                    appKey: 'ATsuFNvEJY2ctQoWGy7CG9YP',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = '海兰';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('true') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
     
 </div>
 
+            </div>
+        
     </div>
 </div>
 
@@ -269,6 +427,27 @@
     </div>
 
     
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
 
     <div class="right-bottom-side-tools">
         <div class="side-tools-container">
@@ -314,6 +493,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -383,6 +570,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
