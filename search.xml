@@ -89,4 +89,17 @@
         <tag>预处理指令</tag>
       </tags>
   </entry>
+  <entry>
+    <title>未知长度数组与字符串的输入输出</title>
+    <url>/2022/11/21/%E6%9C%AA%E7%9F%A5%E9%95%BF%E5%BA%A6%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>文件操作</title>
+    <url>/2023/01/09/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>文件操作函数<br>读取：fgets()、fgetc()、fread()，fscanf（）<br>①char c=fgetc（FILE <em>p）;从文件指针所指文件读取一个字符给c，指针移动一个②字节，读取到文件末尾或读取失败返回EOF<br>fgets（str，N，p）；从文件指针所指文件中读取长度为N的字符串，并将该字符串赋值给str。str为字符串，整数N为要读取的字符数目。fgets() 最多只能读取一行数据，不能跨行。返回值：读取成功时返回字符数组首地址，也即 str；读取失败时返回 NULL；如果开始读取时文件内部指针已经指向了文件末尾，那么将读取不到任何字符，也返回 NULL。<br>③size_t fread(void</em>ptr,size_t size,size_t count,FILE *p);<br>如数组整数数组a写入文件N个元素，则fread(b,sizeof(int),N,p);将写入文件的int类型的数组a的N个元素赋值给b;返回值为N，读到文件末尾或错误则返回值不为N<br>④fscanf(p,”%d %s”,&amp;i,str);返回参数列表中被成功赋值的参数个数。</p>
+<p>int feof（FILE *p）；读取到文件末尾返回非零，未到末尾返回0<br>int ferror（FILE *p）;文件操作出错返回非零，正常返回0<br>void rewind(p);将位置指针移动到文件开头<br>int fseek(FILE *p,long offset,ing origin);long 为要移动字节数，origin 0（SEEK_SET）为开头、1（SEEK_CUR）为当前位置、2（SEEK_END）为末尾<br>fseek() 一般用于二进制文件，在文本文件中由于要进行转换，计算的位置有时会出错。<br>long int ftell（FILE *p）；二进制形式打开，返回位置指针距离文件开头字节数</p>
+<p>写入：fputs()、fputc()、fwrite()，fprintf（）<br>①fputc(‘a’,p);将字符a写入p所指文件中<br>②fputs（str，p）；将字符串str写入文件中，写入失败返回EOF<br>如字符串str1为要写入字符串，经过strcat（str，“\n”）；strcat（str，str1）；后用fputs写入文件<br>③size_t fwrite(void*ptr,size_t size,size_t count,FILE *p);<br>如已知整数数组a，将其N个元素写入文件fwrite(a,sizeof(int),N,p);返回值为N<br>④fprintf（p，“%d %c”，i，ch）；返回为写入字符个数<br>注意：<br>①写入文件可用写、读写、追加方式打开，用写、读写文件时将清除原有文件内容，并将写入的字符放在文件开头。追加方式将保留原有文件内容，并把写入的字符放在文件末尾。不管以何种方式打开，被写入的文件若不存在时则创建该文件。<br>②二进制文件，常用 fread() 和fwrite() 读写。</p>
+]]></content>
+  </entry>
 </search>
