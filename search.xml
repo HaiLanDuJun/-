@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于复杂度</title>
+    <url>/2023/07/01/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+    <content><![CDATA[<p>总结一下代码的时间复杂度与空间复杂度，复杂度即4考量算法和成员函数的效能，即代码的执行效率。目前常用的方法被称为大O表示法（字母O）。<br>    使用大O表示法衡量某个算法的复杂度：当算法运行时间随元素个数成线性增长时（即元素个数与元素时间成倍数增长），则该算法复杂度为O(n)；如果算法的运行时间和输入量n无关，则该算法的复杂度就用O(1)来表示。</p>
+<p><img src="/images/%E5%A4%8D%E6%9D%82%E5%BA%A6.png" alt="img"></p>
+]]></content>
+      <tags>
+        <tag>复杂度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c易错合集</title>
     <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
@@ -21,16 +31,6 @@
         <tag>c语言</tag>
         <tag>函数</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于复杂度</title>
-    <url>/2023/07/01/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
-    <content><![CDATA[<p>总结一下代码的时间复杂度与空间复杂度，复杂度即4考量算法和成员函数的效能，即代码的执行效率。目前常用的方法被称为大O表示法（字母O）。<br>    使用大O表示法衡量某个算法的复杂度：当算法运行时间随元素个数成线性增长时（即元素个数与元素时间成倍数增长），则该算法复杂度为O(n)；如果算法的运行时间和输入量n无关，则该算法的复杂度就用O(1)来表示。</p>
-<p><img src="/images/%E5%A4%8D%E6%9D%82%E5%BA%A6.png" alt="img"></p>
-]]></content>
-      <tags>
-        <tag>复杂度</tag>
       </tags>
   </entry>
   <entry>
@@ -145,5 +145,11 @@
         <tag>笔记</tag>
         <tag>预处理指令</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>微信</title>
+    <url>/2022/07/11/%EF%BC%81/</url>
+    <content><![CDATA[<p><img src="/images/%E5%BE%AE%E4%BF%A1.jpg" alt="img"></p>
+]]></content>
   </entry>
 </search>
