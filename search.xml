@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>c易错合集</title>
+    <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
+]]></content>
+      <tags>
+        <tag>c语言</tag>
+        <tag>易错点</tag>
+        <tag>注意点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于函数</title>
     <url>/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
@@ -10,17 +21,6 @@
         <tag>c语言</tag>
         <tag>函数</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c易错合集</title>
-    <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-        <tag>易错点</tag>
-        <tag>注意点</tag>
       </tags>
   </entry>
   <entry>
@@ -56,13 +56,10 @@
       </tags>
   </entry>
   <entry>
-    <title>娱乐至死</title>
-    <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
-    <content><![CDATA[<p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
+    <title></title>
+    <url>/2023/08/01/%E5%A6%82%E6%9E%9C%E7%94%A8%E7%88%AC%E6%A0%91%E6%9D%A5%E8%A1%A1%E9%87%8F%E4%B8%80%E6%9D%A1%E9%B1%BC%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E9%B1%BC%E4%BC%9A%E7%BB%88%E5%85%B6%E4%B8%80%E7%94%9F%E4%BB%A5%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%98%AF%E6%84%9A%E8%A0%A2%E7%9A%84/</url>
+    <content><![CDATA[<h6><span id="如果用爬树来衡量一条鱼的能力鱼会终其一生以为自己是愚蠢的">如果用爬树来衡量一条鱼的能力，鱼会终其一生以为自己是愚蠢的</span></h6><p>通过爬树的方法，并不能代表一条鱼的能力。大器晚成也好，永远到不了山顶也罢，但一定要快乐和真诚，接受自己的不完美没什么大不了的。因为这个世界上总要允许有普通人存在。</p>
 ]]></content>
-      <tags>
-        <tag>摘录</tag>
-      </tags>
   </entry>
   <entry>
     <title>容器与迭代器</title>
@@ -73,6 +70,15 @@
         <tag>C++</tag>
         <tag>STL</tag>
         <tag>迭代器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>娱乐至死</title>
+    <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
+    <content><![CDATA[<p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
+]]></content>
+      <tags>
+        <tag>摘录</tag>
       </tags>
   </entry>
   <entry>
