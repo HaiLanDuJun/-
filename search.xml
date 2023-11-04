@@ -22,6 +22,18 @@
       </tags>
   </entry>
   <entry>
+    <title>关于函数</title>
+    <url>/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
+<p>函数不能嵌套定义，main也是一个函数定义，所以自己定义的函数要放在main外。main 是函数定义，不是函数调用。当可执行文件加载到内存后，系统从 main 函数开始执行，也就是说，<br>系统会调用我们定义的 main 函数。</p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>c语言</tag>
+        <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c易错合集</title>
     <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
@@ -33,15 +45,13 @@
       </tags>
   </entry>
   <entry>
-    <title>关于函数</title>
-    <url>/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
-<p>函数不能嵌套定义，main也是一个函数定义，所以自己定义的函数要放在main外。main 是函数定义，不是函数调用。当可执行文件加载到内存后，系统从 main 函数开始执行，也就是说，<br>系统会调用我们定义的 main 函数。</p>
+    <title>关于复杂度</title>
+    <url>/2023/07/01/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>总结一下代码的时间复杂度与空间复杂度，复杂度即4考量算法和成员函数的效能，即代码的执行效率。目前常用的方法被称为大O表示法（字母O）。<br>    使用大O表示法衡量某个算法的复杂度：当算法运行时间随元素个数成线性增长时（即元素个数与元素时间成倍数增长），则该算法复杂度为O(n)；如果算法的运行时间和输入量n无关，则该算法的复杂度就用O(1)来表示。</p>
+<p><img src="/images/%E5%A4%8D%E6%9D%82%E5%BA%A6.png" alt="img"></p>
 ]]></content>
       <tags>
-        <tag>笔记</tag>
-        <tag>c语言</tag>
-        <tag>函数</tag>
+        <tag>复杂度</tag>
       </tags>
   </entry>
   <entry>
@@ -67,12 +77,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/08/01/%E5%A6%82%E6%9E%9C%E7%94%A8%E7%88%AC%E6%A0%91%E6%9D%A5%E8%A1%A1%E9%87%8F%E4%B8%80%E6%9D%A1%E9%B1%BC%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E9%B1%BC%E4%BC%9A%E7%BB%88%E5%85%B6%E4%B8%80%E7%94%9F%E4%BB%A5%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%98%AF%E6%84%9A%E8%A0%A2%E7%9A%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h6><span id="如果用爬树来衡量一条鱼的能力鱼会终其一生以为自己是愚蠢的">如果用爬树来衡量一条鱼的能力，鱼会终其一生以为自己是愚蠢的</span></h6><p>通过爬树的方法，并不能代表一条鱼的能力。大器晚成也好，永远到不了山顶也罢，但一定要快乐和真诚，接受自己的不完美没什么大不了的。因为这个世界上总要允许有普通人存在。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>娱乐至死</title>
     <url>/2022/01/20/%E5%A8%B1%E4%B9%90%E8%87%B4%E6%AD%BB/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>娱乐至死的可怕之处不在于娱乐本身，而在于人们日渐失去对社会事务进行严肃思考和理智判断的能力，在于被轻佻的文化环境养成了既无知且无畏的理性文盲而不自知。<br>—— 尼尔・波兹曼 《娱乐至死》</p>
@@ -82,14 +86,10 @@
       </tags>
   </entry>
   <entry>
-    <title>关于复杂度</title>
-    <url>/2023/07/01/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>总结一下代码的时间复杂度与空间复杂度，复杂度即4考量算法和成员函数的效能，即代码的执行效率。目前常用的方法被称为大O表示法（字母O）。<br>    使用大O表示法衡量某个算法的复杂度：当算法运行时间随元素个数成线性增长时（即元素个数与元素时间成倍数增长），则该算法复杂度为O(n)；如果算法的运行时间和输入量n无关，则该算法的复杂度就用O(1)来表示。</p>
-<p><img src="/images/%E5%A4%8D%E6%9D%82%E5%BA%A6.png" alt="img"></p>
+    <title></title>
+    <url>/2023/08/01/%E5%A6%82%E6%9E%9C%E7%94%A8%E7%88%AC%E6%A0%91%E6%9D%A5%E8%A1%A1%E9%87%8F%E4%B8%80%E6%9D%A1%E9%B1%BC%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E9%B1%BC%E4%BC%9A%E7%BB%88%E5%85%B6%E4%B8%80%E7%94%9F%E4%BB%A5%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%98%AF%E6%84%9A%E8%A0%A2%E7%9A%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h6><span id="如果用爬树来衡量一条鱼的能力鱼会终其一生以为自己是愚蠢的">如果用爬树来衡量一条鱼的能力，鱼会终其一生以为自己是愚蠢的</span></h6><p>通过爬树的方法，并不能代表一条鱼的能力。大器晚成也好，永远到不了山顶也罢，但一定要快乐和真诚，接受自己的不完美没什么大不了的。因为这个世界上总要允许有普通人存在。</p>
 ]]></content>
-      <tags>
-        <tag>复杂度</tag>
-      </tags>
   </entry>
   <entry>
     <title>容器与迭代器</title>
@@ -103,17 +103,17 @@
       </tags>
   </entry>
   <entry>
-    <title>新的开始</title>
-    <url>/2023/06/26/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文开始之后将作为海同学2023年暑假学习记录。<br>    <img src="/images/QQ01.jpg" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>文件操作</title>
     <url>/2023/01/09/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>文件操作函数<br>读取：fgets()、fgetc()、fread()，fscanf（）<br>①char c=fgetc（FILE <em>p）;从文件指针所指文件读取一个字符给c，指针移动一个②字节，读取到文件末尾或读取失败返回EOF<br>fgets（str，N，p）；从文件指针所指文件中读取长度为N的字符串，并将该字符串赋值给str。str为字符串，整数N为要读取的字符数目。fgets() 最多只能读取一行数据，不能跨行。返回值：读取成功时返回字符数组首地址，也即 str；读取失败时返回 NULL；如果开始读取时文件内部指针已经指向了文件末尾，那么将读取不到任何字符，也返回 NULL。<br>③size_t fread(void</em>ptr,size_t size,size_t count,FILE *p);<br>如数组整数数组a写入文件N个元素，则fread(b,sizeof(int),N,p);将写入文件的int类型的数组a的N个元素赋值给b;返回值为N，读到文件末尾或错误则返回值不为N<br>④fscanf(p,”%d %s”,&amp;i,str);返回参数列表中被成功赋值的参数个数。</p>
 <p>int feof（FILE *p）；读取到文件末尾返回非零，未到末尾返回0<br>int ferror（FILE *p）;文件操作出错返回非零，正常返回0<br>void rewind(p);将位置指针移动到文件开头<br>int fseek(FILE *p,long offset,ing origin);long 为要移动字节数，origin 0（SEEK_SET）为开头、1（SEEK_CUR）为当前位置、2（SEEK_END）为末尾<br>fseek() 一般用于二进制文件，在文本文件中由于要进行转换，计算的位置有时会出错。<br>long int ftell（FILE *p）；二进制形式打开，返回位置指针距离文件开头字节数</p>
 <p>写入：fputs()、fputc()、fwrite()，fprintf（）<br>①fputc(‘a’,p);将字符a写入p所指文件中<br>②fputs（str，p）；将字符串str写入文件中，写入失败返回EOF<br>如字符串str1为要写入字符串，经过strcat（str，“\n”）；strcat（str，str1）；后用fputs写入文件<br>③size_t fwrite(void*ptr,size_t size,size_t count,FILE *p);<br>如已知整数数组a，将其N个元素写入文件fwrite(a,sizeof(int),N,p);返回值为N<br>④fprintf（p，“%d %c”，i，ch）；返回为写入字符个数<br>注意：<br>①写入文件可用写、读写、追加方式打开，用写、读写文件时将清除原有文件内容，并将写入的字符放在文件开头。追加方式将保留原有文件内容，并把写入的字符放在文件末尾。不管以何种方式打开，被写入的文件若不存在时则创建该文件。<br>②二进制文件，常用 fread() 和fwrite() 读写。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>新的开始</title>
+    <url>/2023/06/26/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本文开始之后将作为海同学2023年暑假学习记录。<br>    <img src="/images/QQ01.jpg" alt="img"></p>
 ]]></content>
   </entry>
   <entry>
