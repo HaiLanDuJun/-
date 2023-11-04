@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c易错合集</title>
-    <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-        <tag>易错点</tag>
-        <tag>注意点</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>代码提高效率</title>
     <url>/2023/08/09/%E4%BB%A3%E7%A0%81%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%EF%BC%9A/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br></pre></td></tr></table></figure>
@@ -33,18 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于函数</title>
-    <url>/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
-<p>函数不能嵌套定义，main也是一个函数定义，所以自己定义的函数要放在main外。main 是函数定义，不是函数调用。当可执行文件加载到内存后，系统从 main 函数开始执行，也就是说，<br>系统会调用我们定义的 main 函数。</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-        <tag>笔记</tag>
-        <tag>函数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于复杂度</title>
     <url>/2023/07/01/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>总结一下代码的时间复杂度与空间复杂度，复杂度即4考量算法和成员函数的效能，即代码的执行效率。目前常用的方法被称为大O表示法（字母O）。<br>    使用大O表示法衡量某个算法的复杂度：当算法运行时间随元素个数成线性增长时（即元素个数与元素时间成倍数增长），则该算法复杂度为O(n)；如果算法的运行时间和输入量n无关，则该算法的复杂度就用O(1)来表示。</p>
@@ -52,6 +29,28 @@
 ]]></content>
       <tags>
         <tag>复杂度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c易错合集</title>
+    <url>/2022/02/20/c%E6%98%93%E9%94%99%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本页将作为上机实践时遇到的易错或需注意的小细节的集合。<br>1.scanf函数中括号后注意空格的影响。如scanf(“%d “,&amp;i);此时会发现键盘只输入一个字符无法结束程序，需输入两个。<br>2.int、char、float 等类型的变量用于 scanf() 时都要在前面添加&amp;，而数组或者字符串用于 scanf() 时不用添加&amp;，它们本身就会转换为地址。</p>
+]]></content>
+      <tags>
+        <tag>c语言</tag>
+        <tag>易错点</tag>
+        <tag>注意点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于数组</title>
+    <url>/2022/02/22/%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>变量的值在编译期间并不能确定，只有等到程序运行后，根据计算结果才能知道它的值到底是什么，所以数组长度中一旦包含了变量，那么数组长度在编译期间就不能确定了，也就不能为数组分配内存了，只有等到程序运行后，得到了变量的值，确定了具体的长度，才能给数组分配内存，我们将这样的数组称为变长数组(VLA, Variable LengthArray)。<br>普通数组（固定长度的数组）是在编译期间分配内存的，而变长数组是在运行期间分配内存的。<br>注意变长数组：从你定义数组的那一刻起（也就是第二行代码），数组的长度就确定下来了，以后再也不会改变了；改变 n 的值<br>并不会影响数组长度，它们之间没有任何“联动”关系。用 scanf() 读入 n 的值，影响的也仅仅是 n 本身，不会影响数组。<br>“\0”为’空字符‘，其在C语言中唯一作用是作为字符串结束标志。<br>数组中由” “包围的字符串会自动在末尾添加’\0’。数组“123456”长度为7，后面添加了“\0”需要注意的是，逐个字符地给数组赋值并不会自动添加’\0’，例如：char str[] = {‘a’, ‘b’, ‘c’};长度为3.<br>当用字符数组存储字符串时，要特别注意’\0’，要为’\0’留个位置；这意味着，字符数组的长度至少要比字符串的长<br>度大 1。<br>在函数内部定义的变量、数组、结构体、共用体等都称为局部数据。在很多编译器下，局部数据的初始值都是随机的、无意义的，而不是我们通常认为的“零”值。这一点非常重要，大家一定要谨记，否则后面会遇到很多奇葩的错误。<br>在函数内部定义数组，可先初始化数组元素。如char str[20]={0};<br>所谓字符串长度，就是字符串包含了多少个字符（不包括最后的结束符’\0’）。例如”abc”的长度是 3，而不是 4。<br>在 C 语言中，我们使用 string.h 头文件中的 strlen() 函数来求字符串的长度，它的用法为：length strlen(strname);<br>strname 是字符串的名字，或者字符数组的名字；length 是使用 strlen() 后得到的字符串长度，是一个整数。<br>如 long len=strlen(strname);//此处用len来储存字符串长度<br>字符串连接函数为strcat(arrayname1,arrayname2);将字符串2连接到字符串1后，去掉1的空字符。<br>字符串复制函数为strcpy(arrayname1,arrayname2);将字符串2中的内容复制到字符串1中去（包括空字符），覆盖1的内容。注意：字符串1的长度要大于2的长度。<br>字符串比较函数strcmp(arrayname1,arrayname2);字符本身没有大小之分，strcmp() 以各个字符对应的 ASCII 码值进行比较。strcmp() 从两个字符串的第 0 个字符开始比较，如果它们相等，就继续比较下一个字符，直到遇见不同的字符，或者到字符串的末尾。返回值：若 arrayName1 和 arrayName2 相同，则返回 0；若 arrayName1 大于 arrayName2，则返回大于 0 的值；若 arrayName1 小于 arrayName2，则返回小于 0 的值。<br>字符串的输入与输出：<br>输出：puts()：输出字符串并自动换行，该函数只能输出字符串。printf()：通过格式控制符%s 输出字符串，不能自动换行。除了字符串，printf() 还能输出其他类型的数据<br> ！注意  ！输出字符串时只需要给出名字，不能带后边的[ ]<br>输入：scanf()：通过格式控制符%s 输入字符串。除了字符串，scanf() 还能输入其他类型的数据。scanf() 读取字符串时以空格为分隔，遇到空格就认为当前字符串结束了，所以无法读取含有空格的字符串。<br>gets()：直接输入字符串，并且只能输入字符串。gets() 认为空格也是字符串的一部分，只有遇到回车键时才认为字符串输入结束，所以，不管输入了多少个空格，只要不按下回车键，对 gets() 来说就是一个完整的字符串。换句话说，gets() 用来读取一整行字符串。<br>！ 注意  ！scanf() 在读取数据时需要的是数据的地址，这一点是恒定不变的，所以对于 int、char、float 等类型的变量都要在前边添加&amp;以获取它们的地址。但是字符串名字或者数组名字在使用的过程中一般都会转换为地址，所以再添加&amp;就是多此一举，甚至会导致错误了。所以使用scanf输入字符串时后字符串名称不用加&amp;</p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>c语言</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -66,21 +65,22 @@
       </tags>
   </entry>
   <entry>
+    <title>关于函数</title>
+    <url>/2022/03/01/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>C 语言自带的函数称为库函数（Library Function）。库（Library）是编程中的一个基本概念，可以简单地认为它是一系列函数的集合，在磁盘上往往是一个文件夹。C 语言自带的库称为标准库（Standard Library），其他公司或个人开发的库称为第三方库（Third-Party Library）。<br>函数的一个明显特征为使用时带括号()，括号中包含的数据与变量称为参数。例如printf(“海兰都郡”)；&lt;”海兰都郡”&gt;即为参数。<br>函数定义：dataType functionName(){  \body   }   dataType：返回值类型。functionName：函数名。//body：函数体，必须带有{}<br>函数声明：dataType functionName(dataName,dataName…..);所谓声明（Declaration），就是告诉编译器我要使用这个函数，你现在没有找到它的定义不要紧，请不要报错，稍后我会把定义补上。<br>return是C语言中的关键字，只能在函数中使用，用来返回结果。没有返回值不需要。<br>函数无返回值或返回值类型不确定时，使用关键字void来代替返回值类型（一旦函数返回值被定义为void，就不能再接收它的值了）<br>函数有参数定义：dataType functionName(dataType1garam1,dataType2param2….){  //body  }”dataType1garam1,dataType2param2…“事参数列表。函数定义时给出的参数称为形式参数，简称形参；函数调用时给出的参数（也就是传递的数据）称为实际参数，简称实参。函数调用时，将实参的值传递给形参，相当于一次赋值操作。<br>函数可以嵌套调用。如果一个函数 A() 在定义或调用过程中出现了对另外一个函数 B() 的调用，那我们就称 A() 为主调函数或主函数，称 B() 为被调函数。<br>定义在函数内部的变量称为局部变量（Local Variable），它的作用域仅限于函数内部， 离开该函数后就是无效的，再使用就会报错。在所有函数外部定义的变量称为全局变量（GlobalVariable），它的作用域默认是整个程序，也就是所有的源文件，包括 .c 和 .h 文件。<br>一个函数在它的函数体内调用它自身称为递归调用，这种函数称为递归函数。<br>                                                       ！！！注意！！！<br>易错：<br>函数声明之后定义时，数据类型要一致！<br>return 语句是提前结束函数的唯一办法。</p>
+<p>函数不能嵌套定义，main也是一个函数定义，所以自己定义的函数要放在main外。main 是函数定义，不是函数调用。当可执行文件加载到内存后，系统从 main 函数开始执行，也就是说，<br>系统会调用我们定义的 main 函数。</p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>c语言</tag>
+        <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2023/08/01/%E5%A6%82%E6%9E%9C%E7%94%A8%E7%88%AC%E6%A0%91%E6%9D%A5%E8%A1%A1%E9%87%8F%E4%B8%80%E6%9D%A1%E9%B1%BC%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E9%B1%BC%E4%BC%9A%E7%BB%88%E5%85%B6%E4%B8%80%E7%94%9F%E4%BB%A5%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%98%AF%E6%84%9A%E8%A0%A2%E7%9A%84/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h6><span id="如果用爬树来衡量一条鱼的能力鱼会终其一生以为自己是愚蠢的">如果用爬树来衡量一条鱼的能力，鱼会终其一生以为自己是愚蠢的</span></h6><p>通过爬树的方法，并不能代表一条鱼的能力。大器晚成也好，永远到不了山顶也罢，但一定要快乐和真诚，接受自己的不完美没什么大不了的。因为这个世界上总要允许有普通人存在。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>关于数组</title>
-    <url>/2022/02/22/%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>变量的值在编译期间并不能确定，只有等到程序运行后，根据计算结果才能知道它的值到底是什么，所以数组长度中一旦包含了变量，那么数组长度在编译期间就不能确定了，也就不能为数组分配内存了，只有等到程序运行后，得到了变量的值，确定了具体的长度，才能给数组分配内存，我们将这样的数组称为变长数组(VLA, Variable LengthArray)。<br>普通数组（固定长度的数组）是在编译期间分配内存的，而变长数组是在运行期间分配内存的。<br>注意变长数组：从你定义数组的那一刻起（也就是第二行代码），数组的长度就确定下来了，以后再也不会改变了；改变 n 的值<br>并不会影响数组长度，它们之间没有任何“联动”关系。用 scanf() 读入 n 的值，影响的也仅仅是 n 本身，不会影响数组。<br>“\0”为’空字符‘，其在C语言中唯一作用是作为字符串结束标志。<br>数组中由” “包围的字符串会自动在末尾添加’\0’。数组“123456”长度为7，后面添加了“\0”需要注意的是，逐个字符地给数组赋值并不会自动添加’\0’，例如：char str[] = {‘a’, ‘b’, ‘c’};长度为3.<br>当用字符数组存储字符串时，要特别注意’\0’，要为’\0’留个位置；这意味着，字符数组的长度至少要比字符串的长<br>度大 1。<br>在函数内部定义的变量、数组、结构体、共用体等都称为局部数据。在很多编译器下，局部数据的初始值都是随机的、无意义的，而不是我们通常认为的“零”值。这一点非常重要，大家一定要谨记，否则后面会遇到很多奇葩的错误。<br>在函数内部定义数组，可先初始化数组元素。如char str[20]={0};<br>所谓字符串长度，就是字符串包含了多少个字符（不包括最后的结束符’\0’）。例如”abc”的长度是 3，而不是 4。<br>在 C 语言中，我们使用 string.h 头文件中的 strlen() 函数来求字符串的长度，它的用法为：length strlen(strname);<br>strname 是字符串的名字，或者字符数组的名字；length 是使用 strlen() 后得到的字符串长度，是一个整数。<br>如 long len=strlen(strname);//此处用len来储存字符串长度<br>字符串连接函数为strcat(arrayname1,arrayname2);将字符串2连接到字符串1后，去掉1的空字符。<br>字符串复制函数为strcpy(arrayname1,arrayname2);将字符串2中的内容复制到字符串1中去（包括空字符），覆盖1的内容。注意：字符串1的长度要大于2的长度。<br>字符串比较函数strcmp(arrayname1,arrayname2);字符本身没有大小之分，strcmp() 以各个字符对应的 ASCII 码值进行比较。strcmp() 从两个字符串的第 0 个字符开始比较，如果它们相等，就继续比较下一个字符，直到遇见不同的字符，或者到字符串的末尾。返回值：若 arrayName1 和 arrayName2 相同，则返回 0；若 arrayName1 大于 arrayName2，则返回大于 0 的值；若 arrayName1 小于 arrayName2，则返回小于 0 的值。<br>字符串的输入与输出：<br>输出：puts()：输出字符串并自动换行，该函数只能输出字符串。printf()：通过格式控制符%s 输出字符串，不能自动换行。除了字符串，printf() 还能输出其他类型的数据<br> ！注意  ！输出字符串时只需要给出名字，不能带后边的[ ]<br>输入：scanf()：通过格式控制符%s 输入字符串。除了字符串，scanf() 还能输入其他类型的数据。scanf() 读取字符串时以空格为分隔，遇到空格就认为当前字符串结束了，所以无法读取含有空格的字符串。<br>gets()：直接输入字符串，并且只能输入字符串。gets() 认为空格也是字符串的一部分，只有遇到回车键时才认为字符串输入结束，所以，不管输入了多少个空格，只要不按下回车键，对 gets() 来说就是一个完整的字符串。换句话说，gets() 用来读取一整行字符串。<br>！ 注意  ！scanf() 在读取数据时需要的是数据的地址，这一点是恒定不变的，所以对于 int、char、float 等类型的变量都要在前边添加&amp;以获取它们的地址。但是字符串名字或者数组名字在使用的过程中一般都会转换为地址，所以再添加&amp;就是多此一举，甚至会导致错误了。所以使用scanf输入字符串时后字符串名称不用加&amp;</p>
-]]></content>
-      <tags>
-        <tag>c语言</tag>
-        <tag>笔记</tag>
-        <tag>数组</tag>
-      </tags>
   </entry>
   <entry>
     <title>娱乐至死</title>
@@ -146,15 +146,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>随笔</title>
-    <url>/2022/02/14/%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>别太在意别人的看法，他们只是为了满足自己的需求。别人对你产生了某些看法，是因为你被对方划进了自己的经验世界里。对方希望按照自己的想法改造自己经验世界里的事物包括人，目的是为了满足自我需求。没有人希望身边出现一个不顺眼的事物，或者一个天天跟自己作对的人。为了让自己生活的空间变得“和谐”，个体会极尽所能改变别人。如果你发现某个人总是对你有很多看法，这意味着你的某些想法或者行为严重影响到了他。无论他对你的看法看上去多么为你好，你都不要太放在心上，实际上他只是为了满足自己需求。是因为他的认知中产生了某种矛盾<br>由于你的出现，造成了他在认知上产生了某些矛盾。原本你没有出现的时候，他的思想、信念、认知、情绪、对世界的看法、对生活的目的都是完整而统一的。可是你的出现，让他意识到原来还有人跟自己的想法不一样，原来还有对事物的另外一种解释。他一时间接受不了，在认知上产生了矛盾。为了消除这种矛盾，对方会尽可能让你意识到是自己的错误，他们不会改变自己的错误，只能来改变你。也就是说，别人并不一定是真心为你好，但是一定是真心为了自己好。</p>
-]]></content>
-      <tags>
-        <tag>人际交往</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机是怎样运行的——二进制</title>
     <url>/2022/01/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84%E2%80%94%E2%80%94%E4%BA%8C%E8%BF%9B%E5%88%B6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本文为笔者学习计算机组成原理的笔记。<br>二进制数：组成二进制数的每个符号都称之为该数的一个二进制位，简称位。如1010（代表十进制数10）它由4个符号组成，我们就说这个数由4个二进制位组成，所以1010是4位二进制数。<br>二进制数也称为比特（bit）<br>十进制的公式为下图<br><img src="/images/jzgs.jpg" alt="img"><br>如图：其中的ki指的是第i位的符号，它可以是0~9这10个符号中的任意一个，ki也被称为第i位的系数，10i被称为第i位的权重，D表示这n位符号的组合代表的数量。n个符号的组合也被称为数字。这里我们将权重10改为2，我们就得到了二进制公式<br>二进制中0在语言编程中表示false          1表示true</p>
@@ -170,13 +161,22 @@
       </tags>
   </entry>
   <entry>
+    <title>随笔</title>
+    <url>/2022/02/14/%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>别太在意别人的看法，他们只是为了满足自己的需求。别人对你产生了某些看法，是因为你被对方划进了自己的经验世界里。对方希望按照自己的想法改造自己经验世界里的事物包括人，目的是为了满足自我需求。没有人希望身边出现一个不顺眼的事物，或者一个天天跟自己作对的人。为了让自己生活的空间变得“和谐”，个体会极尽所能改变别人。如果你发现某个人总是对你有很多看法，这意味着你的某些想法或者行为严重影响到了他。无论他对你的看法看上去多么为你好，你都不要太放在心上，实际上他只是为了满足自己需求。是因为他的认知中产生了某种矛盾<br>由于你的出现，造成了他在认知上产生了某些矛盾。原本你没有出现的时候，他的思想、信念、认知、情绪、对世界的看法、对生活的目的都是完整而统一的。可是你的出现，让他意识到原来还有人跟自己的想法不一样，原来还有对事物的另外一种解释。他一时间接受不了，在认知上产生了矛盾。为了消除这种矛盾，对方会尽可能让你意识到是自己的错误，他们不会改变自己的错误，只能来改变你。也就是说，别人并不一定是真心为你好，但是一定是真心为了自己好。</p>
+]]></content>
+      <tags>
+        <tag>人际交往</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>预处理指令</title>
     <url>/2022/03/12/%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>以#号开头的命令称为预处理命令。<br>在编译之前对源文件进行简单加工的过程，就称为预处理（即预先处理、提前处理）。预处理是 C 语言的一个重要功能，由预处理程序完成。预处理主要是处理以#开头的命令，例如#include &lt;stdio.h&gt;等。<br>C语言宏定义;#define  用一个标识符来表示一个字符串，如果在后面的代码中出现了该标识符，那么就全部替换成指定的字符串。宏定义用法：#define 宏名 字符串 宏名是标识符的一种，命名规则和变量相同。字符串可以是数字、表达式、if 语句、函数等。若要终止宏定义，可使用#undef命令 ：#undef 宏名  宏名若被引号括起来，不做替换。<br>带参数的宏定义：#define 宏名(形式参数) 字符串 调用：宏名(实际参数)在带参宏定义中，不会为形式参数分配内存，因此不必指明数据类型。而在宏调用中，实参包含了具体的数据，要用它们去替换形参，因此实参必须要指明数据类型。对于带参宏定义不仅要在参数两侧加括号，还应该在整个字符串外加括号。<br>带参数的宏和函数很相似，但有本质上的区别：宏展开仅仅是字符串的替换，不会对表达式进行计算；宏在编译之前就被处理掉了，它没有机会参与编译，也不会占用内存。而函数是一段可以重复使用的代码，会被编译，会给它分配内存，每次调用函数，就是执行这块内存中的代码。<br>#用来将宏参数转换为字符串，也就是在宏参数的开头和末尾添加引号。如#define STR(s)#s  使用STR()时括号内实参可为字符串<br>##称为连接符，用来将宏参数或其他的串连接起来。如#define STR(a,b)a##b##1   输出时为“ab1”<br>C语言条件编译所需预处理命令：#if      #ifdef     #ifndef   三者之间区别：#if 后面跟的是“整型常量表达式”，而 #ifdef 和 #ifndef 后面跟的只能是一个宏名，不能是其他的。<br>#error指令：格式：#error error_message   #error 指令用于在编译期间产生错误信息，并阻止程序的编译<br>#include 叫做文件包含命令，用来引入对应的头文件（.h 文件）。#include 也是 C 语言预处理命令的一种。#include 的处理过程很简单，就是将头文件的内容插入到该命令所在的位置，从而把头文件和当前源文件连接成一个源文件，这与复制粘贴的效果相同。使用尖括号&lt; &gt;，编译器会到系统路径下查找头文件； 而使用双引号” “，编译器首先在当前目录下查找头文件，如果没有找到，再到系统路径下查找。使用双引号比使用尖括号多了一个查找路径，它的功能更为强大。<br>「在头文件中定义定义函数和全局变量」这种认知是原则性的错误！不管是标准头文件，还是自定义头文件，都只<br>能包含变量和函数的声明，不能包含定义，否则在多次引入时会引起重复定义错误。</p>
 ]]></content>
       <tags>
-        <tag>c语言</tag>
         <tag>笔记</tag>
+        <tag>c语言</tag>
         <tag>预处理指令</tag>
       </tags>
   </entry>
